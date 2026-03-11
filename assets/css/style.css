@@ -56,7 +56,7 @@ header .search-bar {
     margin-bottom: 30px;
     -webkit-box-shadow: 0px 0px 25px 9px #CFCFCF5b;
     box-shadow: 0px 0px 25px 9px #cfcfcf5b;
-    transition: all 0.5s linear;    
+    transition: all 0.5s linear;
 }
 
 header .search-section {
@@ -99,7 +99,7 @@ header .search-bar.shrink {
     width: 30%;
 }
 
-header .search-bar.shrink input{
+header .search-bar.shrink input {
     display: none;
 }
 
@@ -117,14 +117,83 @@ header .search-bar.shrink i {
     background-position: center;
 }
 
+#hero p {
+    font-size: 2rem;
+}
+
+#hero a.btn {
+    background-color: white;
+    font-size: 1rem;
+}
+
+.liquid {
+    background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+    transition: 0.3s var(--t, 0s),
+        background-position 0.3s calc(0.3s - var(--t, 0s));
+        border: #646cff;
+}
+
+.liquid:hover {
+    --p: 100%;
+    --t: 0.3s;
+    color: #fff;
+}
+
+#hero svg {
+    font-family: 'Russo One', sans-serif;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+#hero svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #ffffff;
+    font-size: 110px;
+}
+
+/*---- Animazione per svg testo ----*/
+@keyframes stroke {
+    0% {
+        fill: rgba(211, 211, 211, 0);
+        stroke: rgb(255, 255, 255);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(255, 255, 255, 0);
+        stroke: rgb(255, 255, 255);
+    }
+
+    80% {
+        fill: rgba(230, 230, 230, 0);
+        stroke: rgb(223, 223, 223);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgb(255, 255, 255);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+
 /*----- Media query per schermi piccoli e medi -----*/
-@media screen and (max-width:959px) {
+@media screen and (max-width:991px) {
+
     header #navbarNavLinks,
-    header #navbarNavLinks+div > a:first-child {
+    header #navbarNavLinks+div>a:first-child {
         display: none;
     }
 
-    
+
     header .search-bar {
         padding: 5px;
         position: absolute;
@@ -144,8 +213,22 @@ header .search-bar.shrink i {
         padding: 8px;
     }
 
-    #hero{
+    #hero {
         height: 300px;
     }
 
+}
+
+/*----- Media query per schermi medi -----*/
+@media screen and (min-width:768px) and (max-width:991px) {
+    #hero a.btn {
+        font-size: 1.1rem;
+    }
+}
+
+/*----- Media query per schermi larghi -----*/
+@media screen and (min-width:991px) {
+    #hero a.btn {
+        font-size: 1.35rem;
+    }
 }

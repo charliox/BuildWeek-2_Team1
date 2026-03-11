@@ -12,3 +12,16 @@ window.addEventListener('scroll', () => {
     }
 })
 
+const navLinks = document.querySelectorAll('#navbarNavLinks a')
+
+navLinks.forEach((link, index)=>{
+    link.addEventListener("click", ()=>{
+        if(!link.classList.contains('active')){
+            link.classList.toggle('active')
+        }
+        for(let i=0; i< navLinks.length; i++){
+            if(i!=index)
+                navLinks[i].classList.remove('active')
+        }
+    })
+})
