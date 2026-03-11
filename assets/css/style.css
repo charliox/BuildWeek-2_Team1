@@ -126,8 +126,6 @@ textarea {
 header .search-bar {
     background-color: white;
     width: 700px;
-    max-width: 600px;
-    min-width: 200px;
     margin: 0 auto;
     padding: 8px 10px;
     border-radius: 35px;
@@ -618,6 +616,10 @@ header .search-bar.shrink i {
     .topbar__nav__center {
         gap: 10px;
     }
+
+    .search-bar{
+        width: 600px !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -656,6 +658,9 @@ header .search-bar.shrink i {
         font-size: 0.75rem;
     }
 
+    .search-bar{
+        width: 400px !important;
+    }
 }
 
 @media (max-width: 640px) {
@@ -688,8 +693,15 @@ header .search-bar.shrink i {
     .gallery__side img {
         height: 150px;
     }
-
-    .search-bar {
+    
+    .search-bar{
+        transform: scale(0.8);
+        position: absolute;
+        top: 2%;
+        left: 0;
+        right: 0;
+    }
+    .search-bar input{
         display: none !important;
     }
 }
