@@ -20,7 +20,7 @@ body {
     color: var(--text);
 }
 
-img {
+#last-page img {
     display: block;
     width: 100%;
 }
@@ -602,6 +602,17 @@ header .search-bar.shrink i {
     max-width: 370px;
 }
 
+
+/*---- Footetr ----*/
+footer a{
+    color:#717171!important;
+}
+footer a:hover{
+    color: #222 !important;
+}
+footer a.nav-link:hover{
+    text-decoration: underline;
+}
 @media (max-width: 1100px) {
     .content-grid {
         grid-template-columns: 1fr;
